@@ -24,12 +24,13 @@
  input:focus {
      outline: none;
  }
- #seek{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
+
+ #seek {
+     position: relative;
+     height: 100%;
+     width: 100%;
+     overflow: hidden;
+ }
 
  .abc {
      position: absolute;
@@ -90,9 +91,11 @@
  /*----------------------------------home*/
 
  #homes {}
-.headerFa{
-    overflow: hidden;
-}
+
+ .headerFa {
+     overflow: hidden;
+ }
+
  .yiJiaHeader {
      position: relative;
      font-size: 0.95rem;
@@ -121,17 +124,18 @@
      height: 0.5rem;
      right: 0.5rem;
      top: .3rem;
-     font-size: 0.1rem;
+     font-size: 0.3rem;
      border-radius: 0.4rem;
      background: #ff0000;
+     text-align: center;
+     line-height: 0.5rem;
  }
 
  .yijiaadvicesNums {
      position: absolute;
      text-align: center;
-     left: 0;
+     left: 25%;
      top: 0;
-     line-height: 1;
  }
 
  .yiJiaImg {
@@ -505,7 +509,6 @@
 
  .findTripInp {
      height: 100%;
-     
      border: none;
      vertical-align: top;
      background: #f8f8f8;
