@@ -988,19 +988,108 @@
         background-size: 1.2rem;*/
  }
  /*-----------------------------------------*/
- .indentFlight{
-background: #fff;
-margin-bottom: 0.5rem;
 
+ .indentFlight {
+     background: #fff;
+     padding-top: 0.3rem;
+     margin-bottom: 0.5rem;
  }
- .indentFlightBar1{
-     line-height: 1rem;
+
+ .indentFlightBars {}
+
+ .indentFlightBar1 {
+     color: #323232;
+     font-size: 0.7rem;
+     line-height: 1.2rem;
  }
- .indentFlightFooter{
-     height: 2rem;
+
+ .indentFlightCom {
+     color: #646464;
+     line-height: 1.3rem;
+     font-size: 0.5rem;
+ }
+
+ .indentFlightBar2 {
+     padding-left: 1rem;
+ }
+
+ .indentFlightBarSp1 {
+     font-size: 0.4rem;
+     color: #7f7f7f;
+ }
+
+
+ .indentFlightXq {
+     font-size: 0.7rem;
+     text-align: center;
+     line-height: 2.4rem;
+     padding-right: 1rem;
+     color: #07467a;
+ }
+
+ .indentFlightCon {
+     background: #FFF;
+     color: #323232;
+     font-size: 0.7rem;
+     line-height: 1.2rem;
+ }
+ .indentFlightXli{
+     border-bottom: dotted 1px #323232;
+ }
+ /**/
+
+  .indentFlightFooter {
+     height: 2.9rem;
      width: 100%;
-     background: red;
+     background: #07467a;
+     padding-top: 0.7rem;
      position: fixed;
      left: 0;
      bottom: 0;
+     line-height: 2rem;
  }
+ .indentFlightFooter1{
+
+ }
+ .indentFlightFooterS1{
+     color: #fff;
+     font-size: 0.7rem;
+
+ }
+
+ .indentFlightFooterS2{
+
+   color: #f5a337;
+     font-size: 0.9rem;
+ }
+
+ .indentFlightFooterS3{
+     color: #fff;
+     font-size: 0.7rem;
+     margin-right: 1.5rem;
+
+ }
+  .indentFlightFooterS4{
+      color: #b9d7ef;
+     font-size: 0.5rem;
+
+ }
+
+ .indentFlightFooterS5{
+   
+
+ }
+  .indentFlightFooterS6{
+      float: right;
+     background: #f5a337;
+     width: 4.25rem;
+     height: 1.4rem;
+     border-radius: .3rem;
+     text-align: center;
+     line-height: 1.4rem;
+     font-size: 0.7rem;
+     color: #fff;
+
+ }
+
+
