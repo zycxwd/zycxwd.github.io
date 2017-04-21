@@ -21,7 +21,7 @@
     </script>
     <link rel="stylesheet" type="text/css" href="css/css4.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-    
+
     <script src="lib/jquery-1.7.2.js"></script>
     <script src="lib/bootstrap.js"></script>
 </head>
@@ -43,8 +43,7 @@
                 <footer class="yiJiaFooter">
                     <ul class="clearfix yiJiaUl">
                         <li v-link="{path:'/home/homepage'}" class="yiJiaLi yiJiaActive" @click="homepage">
-<span class="yiJiaLiSp yiJiaLiSp1"></span>
-                            首页
+                            <span class="yiJiaLiSp yiJiaLiSp1"></span> 首页
                         </li>
                         <li class="yiJiaLi">
                             <div class="yiJiaLiRadio">
@@ -56,8 +55,7 @@
                             </div>
                         </li>
                         <li v-link="{path:'/home/homecenter'}" class="yiJiaLi" @click="homecenter">
-<span class="yiJiaLiSp yiJiaLiSp2"></span>
-                        个人中心
+                            <span class="yiJiaLiSp yiJiaLiSp2"></span> 个人中心
                         </li>
                     </ul>
                 </footer>
@@ -127,116 +125,118 @@
         </template>
         <!-- -----------------------------------------seek  -----------------------------  --------- -->
         <template id="seek">
-            <!--<div id="seek">-->
-            <div>
-                <div style="height:3.2rem; margin-bottom:0.5rem;">
+            <div id="seek">
+                <div style="height:2.2rem; margin-bottom:0.5rem;position:relative;">
                     <header class="findHeader">
                         <span class="findHeaderBar" @click="ticInquires"></span>
                         <span>机票查询</span>
                     </header>
-                </div>
-                <div class="findList clearfix ">
-                    <div :class="{listLeft:true,findActive:sdActivel}" @click="oneway">
-                        <span>单程</span>
 
-                    </div>
-                    <div :class="{listRight:true,findActive:sdActiver}" @click="goback">
-                        <span>往返</span>
-                    </div>
                 </div>
-                <div class="findContent">
-                    <div class="findRoute clearfix">
-                        <div class="routrLeft">
-                            <span class="routrLeftImg"></span>
-                            <span :class="{routeActive:sdActivel1}" @click="business">因公</span>
+
+                    <div class="findList clearfix ">
+                        <div :class="{listLeft:true,findActive:sdActivel}" @click="oneway">
+                            <span>单程</span>
+
                         </div>
-                        <div class="routrRight">
-                            <span class="routrLeftImg"></span>
-                            <span :class="{routeActive:sdActiver1}" @click="privately">因私</span>
+                        <div :class="{listRight:true,findActive:sdActiver}" @click="goback">
+                            <span>往返</span>
                         </div>
                     </div>
+                    <div class="findContent">
+                        <div class="findRoute clearfix">
+                            <div class="routrLeft">
+                                <span class="routrLeftImg"></span>
+                                <span :class="{routeActive:sdActivel1}" @click="business">因公</span>
+                            </div>
+                            <div class="routrRight">
+                                <span class="routrLeftImg"></span>
+                                <span :class="{routeActive:sdActiver1}" @click="privately">因私</span>
+                            </div>
+                        </div>
 
-                    <div v-if="sdActivel1">
+                        <div v-if="sdActivel1">
+                            <div class="findGo">
+                                <div class="findTrip">
+
+                                    <input class="findTripInp" type="text" placeholder="选择出差申请单" onfocus="this.placeholder=''" onblur="this.placeholder='选择出差申请单'">
+                                </div>
+                            </div>
+                            <div class="findGo">
+                                <div class="findTrip">
+                                    <input class="findTripInp" type="text" placeholder="选择出行人" onfocus="this.placeholder=''" onblur="this.placeholder='选择出行人'">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="findGo clearfix">
+                            <span class="findTrip" style="float: left;width: 30%; color:#646464;margin-right:0;" @click="top1">北京</span>
+                            <span class="tripBac"></span>
+                            <span class="findTrip" style="float: right;width: 30%; color:#646464;text-align: right" @click="top1">昆明</span>
+                        </div>
+                        <div class="findGo clearfix">
+                            <div class="findTrip clearfix">
+                                <div class="findTripLeft">
+                                    <span style="color:#646464">6月4日</span>
+                                    <span style="color:#646464; font-size:0.5rem;">周三</span>
+                                </div>
+                                <div class="findTripRight" v-if="sdActiver">
+                                    <span style="color:#646464">6月6日</span>
+                                    <span style="color:#646464; font-size:0.5rem;">周五</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="findGo clearfix">
+                            <div class="findTrip findChild">
+                                <div class="findChild1">
+                                    <span style="font-size:0.5rem;">带婴儿</span><br>
+                                    <span style="font-size:0.5rem;">0-2岁</span>
+                                </div>
+                                <div class="findChild1">
+                                    <span style="font-size:0.5rem;">带儿童</span><br>
+                                    <span style="font-size:0.5rem;">0-12岁</span>
+                                </div>
+                                <div class="findChild1 findChild2">
+                                    选择仓位
+                                </div>
+
+                            </div>
+                        </div>
                         <div class="findGo">
-                            <div class="findTrip">
+                            <div class="findCheck">
+                                <!--<input type="che">-->
 
-                                <input class="findTripInp" type="text" placeholder="选择出差申请单" onfocus="this.placeholder=''" onblur="this.placeholder='选择出差申请单'">
-                            </div>
-                        </div>
-                        <div class="findGo">
-                            <div class="findTrip">
-                                <input class="findTripInp" type="text" placeholder="选择出行人" onfocus="this.placeholder=''" onblur="this.placeholder='选择出行人'">
+                                <span @click="dui" :class="{findRadio:true, findRadioBg:dui1}"></span>
+                                <span>本次出行需要未来人员定义</span><br>
+                                <span style="color:#d4d4d4 ;font-size:0.3rem ;padding-left:0.5rem;">勾选后，本次出行将使用您的差旅标准</span>
 
                             </div>
                         </div>
-                    </div>
-                    <div class="findGo clearfix">
-                        <span class="findTrip" style="float: left;width: 30%; color:#646464;margin-right:0;" @click="top1">北京</span>
-                        <span class="tripBac"></span>
-                        <span class="findTrip" style="float: right;width: 30%; color:#646464;text-align: right" @click="top1">昆明</span>
-                    </div>
-                    <div class="findGo clearfix">
-                        <div class="findTrip clearfix">
-                            <div class="findTripLeft">
-                                <span style="color:#646464">6月4日</span>
-                                <span style="color:#646464; font-size:0.5rem;">周三</span>
-                            </div>
-                            <div class="findTripRight" v-if="sdActiver">
-                                <span style="color:#646464">6月6日</span>
-                                <span style="color:#646464; font-size:0.5rem;">周五</span>
-                            </div>
+                        <div class="findGo" @click="grabble">
+                            <div class="findSub">
+                                <a style="color:#fff;">搜索</a>
 
+                                <!--<span></span>-->
+                            </div>
                         </div>
-
+                        <!--<router-view></router-view>-->
                     </div>
-                    <div class="findGo clearfix">
-                        <div class="findTrip findChild">
-                            <div class="findChild1">
-                                <span style="font-size:0.5rem;">带婴儿</span><br>
-                                <span style="font-size:0.5rem;">0-2岁</span>
-                            </div>
-                            <div class="findChild1">
-                                <span style="font-size:0.5rem;">带儿童</span><br>
-                                <span style="font-size:0.5rem;">0-12岁</span>
-                            </div>
-                            <div class="findChild1 findChild2">
-                                选择仓位
-                            </div>
-
-                        </div>
+                    <div class="findFooter">
+                        <p class="findFooter1">
+                            本次预定使用张三的差旅标准
+                        </p>
+                        <p class="findFooter2">
+                            选好城市之后，选择出
+                        </p>
                     </div>
-                    <div class="findGo">
-                        <div class="findCheck">
-                            <!--<input type="che">-->
-
-                            <span @click="dui" :class="{findRadio:true, findRadioBg:dui1}"></span>
-                            <span>本次出行需要未来人员定义</span><br>
-                            <span style="color:#d4d4d4 ;font-size:0.3rem ;padding-left:0.5rem;">勾选后，本次出行将使用您的差旅标准</span>
-
-                        </div>
+                    <div :class="{abc:true,abc1:abc}" @click="top1">
+                        我是城市控件
                     </div>
-                    <div class="findGo" @click="grabble">
-                        <div class="findSub">
-                            <a style="color:#fff;">搜索</a>
-
-                            <!--<span></span>-->
-                        </div>
-                    </div>
-                    <!--<router-view></router-view>-->
                 </div>
-                <div class="findFooter">
-                    <p class="findFooter1">
-                        本次预定使用张三的差旅标准
-                    </p>
-                    <p class="findFooter2">
-                        选好城市之后，选择出
-                    </p>
-                </div>
+
             </div>
-            <div :class="{abc:true,abc1:abc}" @click="top1">
-                我是城市控件
-            </div>
-            <!--</div>-->
         </template>
         <!--------------------------------------------航班列表------------------------------------------>
         <template id="list1">
@@ -246,7 +246,7 @@
             </header>-->
 
             <div id="#list">
-                <div style="height:3.2rem; margin-bottom:0.5rem;">
+                <div style="height:2.2rem; margin-bottom:0.5rem;">
                     <header class="findHeader">
                         <span class="findHeaderBar" @click="prev"></span>
                         <span>北京-首都</span>

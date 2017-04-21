@@ -24,13 +24,12 @@
  input:focus {
      outline: none;
  }
- /*#seek{
+ #seek{
     position: relative;
     height: 100%;
     width: 100%;
-    background: blue;
     overflow: hidden;
-}*/
+}
 
  .abc {
      position: absolute;
@@ -91,13 +90,15 @@
  /*----------------------------------home*/
 
  #homes {}
-
+.headerFa{
+    overflow: hidden;
+}
  .yiJiaHeader {
      position: relative;
      font-size: 0.95rem;
-     line-height: 3.2rem;
+     line-height: 2.2rem;
      color: #fff;
-     height: 3.2rem;
+     height: 2.2rem;
      background: #07467a;
      text-align: center;
      overflow: hidden;
@@ -109,7 +110,7 @@
      width: 0.95rem;
      height: 0.95rem;
      right: 1.25rem;
-     top: 1.45rem;
+     top: .45rem;
      background: url(../imgs/homepage/advices.png) no-repeat;
      background-size: 0.95rem;
  }
@@ -119,7 +120,7 @@
      width: 0.75rem;
      height: 0.5rem;
      right: 0.5rem;
-     top: 1.3rem;
+     top: .3rem;
      font-size: 0.1rem;
      border-radius: 0.4rem;
      background: #ff0000;
@@ -398,10 +399,10 @@
      left: 0;
      top: 0;
      width: 100%;
-     font-size: 0.95rem;
-     line-height: 3.2rem;
+     font-size: 0.8rem;
+     line-height: 2.2rem;
      color: #fff;
-     height: 3.2rem;
+     height: 2.2rem;
      background: #07467a;
      text-align: center;
      /*border: 1px solid #000;*/
@@ -419,7 +420,7 @@
      height: 0.75rem;
      width: 0.45rem;
      left: 0.5rem;
-     top: 1.4rem;
+     top: 0.7rem;
      background: url("../imgs/serviceProvider/arrowReturns.png") no-repeat;
      background-size: 0.45rem 0.75rem;
  }
@@ -504,9 +505,10 @@
 
  .findTripInp {
      height: 100%;
+     
      border: none;
      vertical-align: top;
-     background: red;
+     background: #f8f8f8;
  }
 
  .findTripLeft {
