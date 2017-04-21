@@ -140,6 +140,18 @@ var List1 = Vue.extend({
 
     }
 });
+var Indent = Vue.extend({
+    template: "#indent",
+    methods: {
+        fun: function () {
+            console.log(1)
+        },
+        prev:function(){
+            
+        }
+
+    }
+})
 //机票详情组件
 var Listsub = Vue.extend({
     template: "#listsub",
@@ -282,8 +294,8 @@ router.map({
                     },
                     template: '#serviceProvider',
                     methods: {
-                        fun: function () {
-                            // this.$router.replace('/list1/flightList');
+                        indent: function () {
+                            this.$router.replace('/indent');
                         }
                     }
                 }
@@ -314,6 +326,9 @@ router.map({
                 }
             }
         }
+    },
+    'indent': {
+        component: Indent
     },
     'listsub': {
         component: Listsub

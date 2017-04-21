@@ -987,3 +987,20 @@
      /*background: url(../imgs/ticketInquires/mToE.png) no-repeat 50% 10%;
         background-size: 1.2rem;*/
  }
+ /*-----------------------------------------*/
+ .indentFlight{
+background: #fff;
+margin-bottom: 0.5rem;
+
+ }
+ .indentFlightBar1{
+     line-height: 1rem;
+ }
+ .indentFlightFooter{
+     height: 2rem;
+     width: 100%;
+     background: red;
+     position: fixed;
+     left: 0;
+     bottom: 0;
+ }

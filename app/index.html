@@ -37,28 +37,28 @@
             <!--<div id="homes">-->
 
 
-                <!--star路由位置-->
-                <router-view></router-view>
-                <!--end路由位置-->
-                <footer class="yiJiaFooter">
-                    <ul class="clearfix yiJiaUl">
-                        <li v-link="{path:'/home/homepage'}" class="yiJiaLi yiJiaActive" @click="homepage">
-                            <span class="yiJiaLiSp yiJiaLiSp1"></span> 首页
-                        </li>
-                        <li class="yiJiaLi">
-                            <div class="yiJiaLiRadio">
-                                <div class="yiJiaLiRadioBar">
-                                    <span class="yiJiaLiRadioBarSp yiJiaLiRadioBarSp1"></span>
-                                    <span class="yiJiaLiRadioBarSp yiJiaLiRadioBarSp2"></span>
+            <!--star路由位置-->
+            <router-view></router-view>
+            <!--end路由位置-->
+            <footer class="yiJiaFooter">
+                <ul class="clearfix yiJiaUl">
+                    <li v-link="{path:'/home/homepage'}" class="yiJiaLi yiJiaActive" @click="homepage">
+                        <span class="yiJiaLiSp yiJiaLiSp1"></span> 首页
+                    </li>
+                    <li class="yiJiaLi">
+                        <div class="yiJiaLiRadio">
+                            <div class="yiJiaLiRadioBar">
+                                <span class="yiJiaLiRadioBarSp yiJiaLiRadioBarSp1"></span>
+                                <span class="yiJiaLiRadioBarSp yiJiaLiRadioBarSp2"></span>
 
-                                </div>
                             </div>
-                        </li>
-                        <li v-link="{path:'/home/homecenter'}" class="yiJiaLi" @click="homecenter">
-                            <span class="yiJiaLiSp yiJiaLiSp2"></span> 个人中心
-                        </li>
-                    </ul>
-                </footer>
+                        </div>
+                    </li>
+                    <li v-link="{path:'/home/homecenter'}" class="yiJiaLi" @click="homecenter">
+                        <span class="yiJiaLiSp yiJiaLiSp2"></span> 个人中心
+                    </li>
+                </ul>
+            </footer>
             <!--</div>-->
         </template>
         <!--------------------------------------------homepage---------------------------------------->
@@ -134,141 +134,141 @@
 
                 </div>
 
-                    <div class="findList clearfix ">
-                        <div :class="{listLeft:true,findActive:sdActivel}" @click="oneway">
-                            <span>单程</span>
+                <div class="findList clearfix ">
+                    <div :class="{listLeft:true,findActive:sdActivel}" @click="oneway">
+                        <span>单程</span>
 
+                    </div>
+                    <div :class="{listRight:true,findActive:sdActiver}" @click="goback">
+                        <span>往返</span>
+                    </div>
+                </div>
+                <div class="findContent">
+                    <div class="findRoute clearfix">
+                        <div class="routrLeft">
+                            <span class="routrLeftImg"></span>
+                            <span :class="{routeActive:sdActivel1}" @click="business">因公</span>
                         </div>
-                        <div :class="{listRight:true,findActive:sdActiver}" @click="goback">
-                            <span>往返</span>
+                        <div class="routrRight">
+                            <span class="routrLeftImg"></span>
+                            <span :class="{routeActive:sdActiver1}" @click="privately">因私</span>
                         </div>
                     </div>
-                    <div class="findContent">
-                        <div class="findRoute clearfix">
-                            <div class="routrLeft">
-                                <span class="routrLeftImg"></span>
-                                <span :class="{routeActive:sdActivel1}" @click="business">因公</span>
-                            </div>
-                            <div class="routrRight">
-                                <span class="routrLeftImg"></span>
-                                <span :class="{routeActive:sdActiver1}" @click="privately">因私</span>
-                            </div>
-                        </div>
 
-                        <div v-if="sdActivel1">
-                            <div class="findGo">
-                                <div class="findTrip">
+                    <div v-if="sdActivel1">
+                        <div class="findGo">
+                            <div class="findTrip">
 
-                                    <input class="findTripInp" type="text" placeholder="选择出差申请单" onfocus="this.placeholder=''" onblur="this.placeholder='选择出差申请单'">
-                                </div>
-                            </div>
-                            <div class="findGo">
-                                <div class="findTrip">
-                                    <input class="findTripInp" type="text" placeholder="选择出行人" onfocus="this.placeholder=''" onblur="this.placeholder='选择出行人'">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="findGo clearfix">
-                            <span class="findTrip" style="float: left;width: 30%; color:#646464;margin-right:0;" @click="top1">北京</span>
-                            <span class="tripBac"></span>
-                            <span class="findTrip" style="float: right;width: 30%; color:#646464;text-align: right" @click="top1">昆明</span>
-                        </div>
-                        <div class="findGo clearfix">
-                            <div class="findTrip clearfix">
-                                <div class="findTripLeft">
-                                    <span style="color:#646464">6月4日</span>
-                                    <span style="color:#646464; font-size:0.5rem;">周三</span>
-                                </div>
-                                <div class="findTripRight" v-if="sdActiver">
-                                    <span style="color:#646464">6月6日</span>
-                                    <span style="color:#646464; font-size:0.5rem;">周五</span>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <div class="findGo clearfix">
-                            <div class="findTrip findChild">
-                                <div class="findChild1">
-                                    <span style="font-size:0.5rem;">带婴儿</span><br>
-                                    <span style="font-size:0.5rem;">0-2岁</span>
-                                </div>
-                                <div class="findChild1">
-                                    <span style="font-size:0.5rem;">带儿童</span><br>
-                                    <span style="font-size:0.5rem;">0-12岁</span>
-                                </div>
-                                <div class="findChild1 findChild2">
-                                    选择仓位
-                                </div>
-
+                                <input class="findTripInp" type="text" placeholder="选择出差申请单" onfocus="this.placeholder=''" onblur="this.placeholder='选择出差申请单'">
                             </div>
                         </div>
                         <div class="findGo">
-                            <div class="findCheck">
-                                <!--<input type="che">-->
-
-                                <span @click="dui" :class="{findRadio:true, findRadioBg:dui1}"></span>
-                                <span>本次出行需要未来人员定义</span><br>
-                                <span style="color:#d4d4d4 ;font-size:0.3rem ;padding-left:0.5rem;">勾选后，本次出行将使用您的差旅标准</span>
+                            <div class="findTrip">
+                                <input class="findTripInp" type="text" placeholder="选择出行人" onfocus="this.placeholder=''" onblur="this.placeholder='选择出行人'">
 
                             </div>
                         </div>
-                        <div class="findGo" @click="grabble">
-                            <div class="findSub">
-                                <a style="color:#fff;">搜索</a>
-
-                                <!--<span></span>-->
+                    </div>
+                    <div class="findGo clearfix">
+                        <span class="findTrip" style="float: left;width: 30%; color:#646464;margin-right:0;" @click="top1">北京</span>
+                        <span class="tripBac"></span>
+                        <span class="findTrip" style="float: right;width: 30%; color:#646464;text-align: right" @click="top1">昆明</span>
+                    </div>
+                    <div class="findGo clearfix">
+                        <div class="findTrip clearfix">
+                            <div class="findTripLeft">
+                                <span style="color:#646464">6月4日</span>
+                                <span style="color:#646464; font-size:0.5rem;">周三</span>
                             </div>
+                            <div class="findTripRight" v-if="sdActiver">
+                                <span style="color:#646464">6月6日</span>
+                                <span style="color:#646464; font-size:0.5rem;">周五</span>
+                            </div>
+
                         </div>
-                        <!--<router-view></router-view>-->
+
                     </div>
-                    <div class="findFooter">
-                        <p class="findFooter1">
-                            本次预定使用张三的差旅标准
-                        </p>
-                        <p class="findFooter2">
-                            选好城市之后，选择出
-                        </p>
+                    <div class="findGo clearfix">
+                        <div class="findTrip findChild">
+                            <div class="findChild1">
+                                <span style="font-size:0.5rem;">带婴儿</span><br>
+                                <span style="font-size:0.5rem;">0-2岁</span>
+                            </div>
+                            <div class="findChild1">
+                                <span style="font-size:0.5rem;">带儿童</span><br>
+                                <span style="font-size:0.5rem;">0-12岁</span>
+                            </div>
+                            <div class="findChild1 findChild2">
+                                选择仓位
+                            </div>
+
+                        </div>
                     </div>
-                    <div :class="{abc:true,abc1:abc}" @click="top1">
-                        我是城市控件
+                    <div class="findGo">
+                        <div class="findCheck">
+                            <!--<input type="che">-->
+
+                            <span @click="dui" :class="{findRadio:true, findRadioBg:dui1}"></span>
+                            <span>本次出行需要未来人员定义</span><br>
+                            <span style="color:#d4d4d4 ;font-size:0.3rem ;padding-left:0.5rem;">勾选后，本次出行将使用您的差旅标准</span>
+
+                        </div>
                     </div>
+                    <div class="findGo" @click="grabble">
+                        <div class="findSub">
+                            <a style="color:#fff;">搜索</a>
+
+                            <!--<span></span>-->
+                        </div>
+                    </div>
+                    <!--<router-view></router-view>-->
                 </div>
-
+                <div class="findFooter">
+                    <p class="findFooter1">
+                        本次预定使用张三的差旅标准
+                    </p>
+                    <p class="findFooter2">
+                        选好城市之后，选择出
+                    </p>
+                </div>
+                <div :class="{abc:true,abc1:abc}" @click="top1">
+                    我是城市控件
+                </div>
             </div>
-        </template>
-        <!--------------------------------------------航班列表------------------------------------------>
-        <template id="list1">
-            <!--<header class="findHeader">
+
+    </div>
+    </template>
+    <!--------------------------------------------航班列表------------------------------------------>
+    <template id="list1">
+        <!--<header class="findHeader">
                  <span class="findHeaderBar">&#8249</span>
                 <span style="text-align: center;display: inline-block;">北京-首都</span>
             </header>-->
 
-            <div id="#list">
-                <div style="height:2.2rem; margin-bottom:0.5rem;">
-                    <header class="findHeader">
-                        <span class="findHeaderBar" @click="prev"></span>
-                        <span>北京-首都</span>
-                    </header>
-                </div>
+        <div id="#list">
+            <div style="height:2.2rem; margin-bottom:0.5rem;">
+                <header class="findHeader">
+                    <span class="findHeaderBar" @click="prev"></span>
+                    <span>北京-首都</span>
+                </header>
             </div>
-            <router-view></router-view>
-            <div class="listFooter">
-                <ul class="clearfix listFooterUl">
-                    <!--<li v-for="(index, todo)  in todos" :class="{listFooterLi:true,listFooterActive:listFooterActive}" @click="funs($index,todo)">
+        </div>
+        <router-view></router-view>
+        <div class="listFooter">
+            <ul class="clearfix listFooterUl">
+                <!--<li v-for="(index, todo)  in todos" :class="{listFooterLi:true,listFooterActive:listFooterActive}" @click="funs($index,todo)">
                         {{todo.a}}
                     </li>-->
-                    <!--v-link="{name: 'user', params: {userId: 1}"-->
-                    <li @click="funs1" v-link="{path:'/list1/flightList'}" :class="{listFooterLi:true, listFooterLi1:listActive1, listFooterLi1w:true}"
-                        @click="funs($index,todo)">
-                        从早到晚
-                    </li>
-                    <li @click="funs2" v-link="{path:'/list1/cost'}" :class="{listFooterLi:true, listFooterLi2:listActive2, listFooterLi2w:true}">价格</li>
-                    <li @click="funs3" v-link="{path:'/list1/filtrate'}" :class="{listFooterLi:true, listFooterLi3:listActive3, listFooterLi3w:true}">航班筛选</li>
-                </ul>
-            </div>
-    </div>
+                <!--v-link="{name: 'user', params: {userId: 1}"-->
+                <li @click="funs1" v-link="{path:'/list1/flightList'}" :class="{listFooterLi:true, listFooterLi1:listActive1, listFooterLi1w:true}"
+                    @click="funs($index,todo)">
+                    从早到晚
+                </li>
+                <li @click="funs2" v-link="{path:'/list1/cost'}" :class="{listFooterLi:true, listFooterLi2:listActive2, listFooterLi2w:true}">价格</li>
+                <li @click="funs3" v-link="{path:'/list1/filtrate'}" :class="{listFooterLi:true, listFooterLi3:listActive3, listFooterLi3w:true}">航班筛选</li>
+            </ul>
+        </div>
+        </div>
     </template>
     <!--------------------------------------------航班列表 列表组件-------------------------------------->
     <template id="flightList">
@@ -350,7 +350,6 @@
         <div>
             航班筛选
         </div>
-
     </template>
 
     <!--------------------------------------------航班列表 列表组件-------------------------------------->
@@ -405,7 +404,7 @@
                             <span class="allTankListJia">+</span>
                             <span class="allTankListJiaMon allTankListMon moneyColor">¥10</span>
                         </div>
-                        <div class="floatRight allTankListOrder">订</div>
+                        <div class="floatRight allTankListOrder" @click="indent">订</div>
 
                     </div>
                     <div class="allTankListBottom">
@@ -514,6 +513,39 @@
 
 
     </template>
+    <!-- -----------------------------------------订单详情------------------------------------------>
+    <template id="indent">
+        <div style="height:2.2rem;position:relative;">
+            <header class="findHeader">
+                <span class="findHeaderBar" @click="prev"></span>
+                <span>北京-首都</span>
+            </header>
+        </div>
+        <div class=" indentFlight">
+           <div class="common clearfix">
+                <div class=" float indentFlightBar">
+                <div class="indentFlightBar1">
+                    <span>单程</span>
+                    <span>04-06   </span>
+                    <span>周四</span>
+                    <span> 11:35</span>
+                    
+                </div>
+                <div  class="indentFlightBar2">支付成功后预计180分钟出票</div>
+                
+            </div>
+            <div class=" floatRight indentFlightBar">航班详情</div>
+           </div>
+        </div>
+        <div style="height:30rem;background:blue;">
+            123
+        </div>
+        <footer  class=" indentFlightFooter">
+            123
+        </footer>
+    </template>
+
+
     <!--------------------------------------------遮罩层、、-------------------------------------、-->
     <div role="dialog" class="modal fade bs-example-modal-sm" id="layer">
         <div class="modal-dialog" style="margin-top:150px;">
